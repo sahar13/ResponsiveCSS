@@ -1,0 +1,244 @@
+#wrapper {
+  width: 90%;
+  margin: auto;
+  background-color: #FAFBF6;
+ }
+
+header {
+  border-bottom: 3px solid #D8715C;
+  text-align: center;
+}
+
+h1 {
+  font-family: Garamond;
+  font-weight: 100;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+#book-title {
+  font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 70px;
+  letter-spacing: -5px;
+
+}
+
+.intro {
+  margin-top: -125px;
+}
+
+#dropcap {
+  float: left;
+  line-height: 75px;
+  font-size: 75px;
+  margin-top: 20px;
+  text-align: left;
+  margin-top: 0px;
+  font-weight: 500;
+}
+
+.type-title,
+.find-title {
+  margin-top: 50px;
+  border-top: 1px solid #D9DAD2;
+  border-bottom: 1px solid #D9DAD2;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.time-title {
+  border-bottom: 1px solid #D9DAD2;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.time {
+  padding: 10px;
+  background-color: #EAEBE5;
+}
+
+p {
+  font-family: Garamond;
+  color: #5D5B51;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+.indent{
+  text-indent: 20px;
+}
+
+h2 {
+  font-family: Garamond;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #5D5B51;
+}
+
+h3 {
+  font-family: Garamond;
+  text-transform: uppercase;
+  color: #5D5B51;
+  margin: 0;
+  line-height: 30px;
+}
+
+.eg {
+  font-size: 10px;
+}
+
+.source {
+  color: #D8715C;
+  font-style: italic;
+}
+
+.footer-p {
+  border-top: 1px solid #D9DAD2;
+  text-align: right;
+  padding-top: 10px;
+  margin-top: 50px;
+}
+
+.type div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D9DAD2;
+}
+
+.type h3 {
+  float: left;
+}
+.type img {
+  float: right;
+}
+.type p {
+  clear: both;
+}
+
+.intro-img {
+  visibility: hidden;
+}
+
+/*For tablet view*/
+@media only screen and (min-width: 768px) {
+  header {
+    border-top: 3px solid black;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .time {
+    padding: 5px 25px;
+  }
+  .intro-p p,
+  .time-p p {
+    margin: 0;
+    line-height: 135%;
+    padding-bottom: 20px;
+  }
+
+  .time-p {
+    column-count: 2;
+  }
+  .type div {
+    width: 45%;
+    float: left;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px;
+    height: 300px;
+    transition: width 3s;
+  }
+  .find-p {
+    padding: 5px 25px;
+  }
+
+  /*CSS doesn't work
+  .fantasy,
+  .science {
+    border: none;
+  }*/
+
+}
+
+/*For desktop view*/
+@media only screen and (min-width: 960px) {
+  #wrapper {
+    max-width: 1020px;
+  }
+  header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-top: none;
+  }
+
+  h1 {
+    font-size: 70px;
+    padding-left: 100px;
+    text-align: left;
+    overflow: hidden;
+    animation: typing 7s steps(100, end);
+  }
+  #book-title {
+    font-size: 100px;
+    padding-left: 50px;
+  }
+
+  .intro {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+  }
+
+  .intro-img {
+    visibility: visible;
+  }
+  .intro-p {
+    column-count: 2;
+  }
+
+  .type div {
+    width: 29%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px;
+    height: 350px;
+  }
+  .time {
+    padding: 10px 50px;
+    margin-top: 30px;
+  }
+  .time-p {
+      column-count: 3;
+      margin-top: 0;
+      margin-bottom: 20px;
+  }
+  .find-p {
+    padding: 10px 50px;
+  }
+
+  .type img:hover {
+    animation-name: jiggle;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+
+  @keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+  }
+
+  @keyframes jiggle {
+    0%{transform: translate(3px) rotate(10deg)}
+    20%{transform: translate(-6px) rotate(-20deg)}
+    60%{transform: translate(4px) rotate(17deg)}
+    100%{transform: translate(-2px) rotate(-15deg)}
+  }
+}
